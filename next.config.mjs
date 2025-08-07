@@ -3,12 +3,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  distDir: 'docs',
+  distDir: 'docs', // ✅ 直接导出到 docs 目录
+  basePath: '/my-portfolio-bootstrap',
   images: {
     unoptimized: true,
   },
-  basePath: "/my-portfolio-bootstrap",
-  assetPrefix: "/my-portfolio-bootstrap/",
 };
 
 export default nextConfig;
