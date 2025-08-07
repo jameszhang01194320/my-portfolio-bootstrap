@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "export": "next export",
-  "predeploy": "npm run build && npm run export",
-  "deploy": "git add . && git commit -m 'Deploy' && git push origin main"
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "predeploy": "npm run build && npm run export",
+    "deploy": "git add . && git commit -m 'Deploy' && git push origin main"
   },
   "dependencies": {
     "bootstrap": "^5.3.7",
