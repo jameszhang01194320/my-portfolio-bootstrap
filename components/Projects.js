@@ -10,7 +10,7 @@ const projects = [
     description: 'Backend system enabling homeowners and landlords to track appliance ownership and maintenance costs.',
     stack: 'Python, Flask, SQLAlchemy, PostgreSQL, RESTful API',
     image: `${basePath}/repair.jpg`,
-    github: 'https://github.com/jameszhang01194320/repair_or_replace-back_end'
+    github: 'https://github.com/jameszhang01194320/repair_or_replace_back_end'
   },
   {
     title: 'E-commerce Platform',
@@ -54,12 +54,23 @@ export default function Projects() {
                   {/* ✅ 文本用 text-body-secondary，自动适配 */}
                   <small className="text-body-secondary">{project.stack}</small>
                 </Card.Body>
+
+                
                 <Card.Footer className="bg-body border-0">
-                  {/* ✅ 按钮用 outline 变体，深浅都好看 */}
-                  <Button href={project.github} target="_blank" variant="outline-secondary">
-                    🔗 Github
+                  {/* ✅ 将 href 和 target 属性直接传递给 Button */}
+                  <Button
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="outline-secondary"
+                  >
+                    <span className="d-inline-flex align-items-center gap-2">
+                      <span>🔗</span> Github
+                    </span>
                   </Button>
                 </Card.Footer>
+
+
               </Card>
             </Col>
           ))}
