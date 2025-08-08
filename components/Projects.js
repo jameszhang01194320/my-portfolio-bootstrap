@@ -17,14 +17,14 @@ const projects = [
     description: 'Full-featured e-commerce platform with user registration/login, shopping cart, and order processing.',
     stack: 'Flask, React, SQL, AWS',
     image: `${basePath}/ecommerce.jpg`,
-    github: '#'
+    github: 'https://github.com/jameszhang01194320/week12_mini_E-commerceWebApp'
   },
   {
     title: 'Library Management System',
     description: 'Library system supporting registration, book borrowing, and inventory updates.',
     stack: 'Python, SQL',
     image: `${basePath}/library.jpg`,
-    github: '#'
+    github: 'https://github.com/jameszhang01194320/LibraryManagementSystem'
   }
 ];
 
