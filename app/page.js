@@ -23,7 +23,7 @@ export default function Home() {
         <Skills />
       </section>
 
-      <section id="experience">
+      <section id="experiences">
         <Experience />
       </section>
 
