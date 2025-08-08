@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
-    "predeploy": "npm run build && npm run export",
-    "deploy": "git add . && git commit -m 'Deploy' && git push origin main"
+    "build": "set NODE_ENV=production && next build",
+    "deploy": "set NODE_ENV=production && npm run build && git add docs && git commit -m \"deploy site\" && git push"
   },
+
   "dependencies": {
     "bootstrap": "^5.3.7",
     "next": "15.4.6",
