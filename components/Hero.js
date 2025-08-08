@@ -46,7 +46,7 @@ export default function Hero() {
 
           <Col md={5}>
             <Image
-              src="/me.jpg"   // ✅ 同样直接用 public 下的路径
+              src="./me.jpg"   // ✅ 同样直接用 public 下的路径
               alt="James Zhang"
               width={400}
               height={400}

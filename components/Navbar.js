@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav id="main-navbar" className="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
       <div className="container">
-        <Link className="navbar-brand fw-bold" href="/">James</Link>
+        <Link className="navbar-brand fw-bold" href="./">James</Link>
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
           <span className="navbar-toggler-icon"></span>
