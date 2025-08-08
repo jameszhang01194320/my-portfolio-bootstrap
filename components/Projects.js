@@ -2,29 +2,28 @@
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import Image from 'next/image';
 
-// ✅ 读取 basePath（部署时会自动加前缀）
-const BP = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const projects = [
   {
     title: 'Repair_or_replace-back_end',
     description: 'Backend system enabling homeowners and landlords to track appliance ownership and maintenance costs.',
     stack: 'Python, Flask, SQLAlchemy, PostgreSQL, RESTful API',
-    image: `${BP}/repair.jpg`,
+    image: `${basePath}/repair.jpg`,
     github: '#'
   },
   {
     title: 'E-commerce Platform',
     description: 'Full-featured e-commerce platform with user registration/login, shopping cart, and order processing.',
     stack: 'Flask, React, SQL, AWS',
-    image: `${BP}/ecommerce.jpg`,
+    image: `${basePath}/ecommerce.jpg`,
     github: '#'
   },
   {
     title: 'Library Management System',
     description: 'Library system supporting registration, book borrowing, and inventory updates.',
     stack: 'Python, SQL',
-    image: `${BP}/library.jpg`,
+    image: `${basePath}/library.jpg`,
     github: '#'
   }
 ];
@@ -43,6 +42,7 @@ export default function Projects() {
                   alt={project.title}
                   width={500}
                   height={300}
+                  priority
                   className="card-img-top"
                   style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                 />

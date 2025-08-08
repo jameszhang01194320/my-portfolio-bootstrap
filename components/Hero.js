@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-const BP = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Hero() {
   return (
@@ -10,9 +10,7 @@ export default function Hero() {
       <Container>
         <Row className="align-items-center">
           <Col md={7}>
-            <h1 className="display-4">
-              Hey, I&apos;m <strong>James Zhang</strong>
-            </h1>
+            <h1 className="display-4">Hey, I&apos;m <strong>James Zhang</strong></h1>
             <p className="lead">
               I am a web developer with experience in Python, JavaScript, SQL, and full-stack web development.
             </p>
@@ -23,7 +21,7 @@ export default function Hero() {
           </Col>
           <Col md={5}>
             <Image
-              src={`${BP}/me.jpg`}
+              src={`${basePath}/me.jpg`}
               alt="James Zhang"
               width={400}
               height={400}
