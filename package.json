@@ -2,12 +2,12 @@
   "name": "my-portfolio-bootstrap",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "set NODE_ENV=production && next build",
-    "deploy": "set NODE_ENV=production && npm run build && git add docs && git commit -m \"deploy site\" && git push"
-  },
-
+"scripts": {
+  "dev": "next dev",
+  "build": "cross-env NODE_ENV=production next build",
+  "deploy": "if exist docs rd /s /q docs && if exist .next rd /s /q .next && cross-env NODE_ENV=production next build && (if not exist docs\\.nojekyll type NUL > docs\\.nojekyll) && git add -f docs && git commit -m \"deploy site\" && git push"
+}
+,
   "dependencies": {
     "bootstrap": "^5.3.7",
     "next": "15.4.6",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "cross-env": "^10.0.0",
     "eslint": "^9",
     "eslint-config-next": "15.4.6"
   }
