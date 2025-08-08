@@ -30,13 +30,15 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="bg-white py-5">
+    // ✅ 用 bg-body 跟随 data-bs-theme
+    <section className="py-5 bg-body" id="projects">
       <Container>
         <h2 className="text-center mb-5">📁 My Projects</h2>
         <Row>
           {projects.map((project, idx) => (
             <Col md={4} className="mb-4" key={idx}>
-              <Card className="h-100">
+              {/* ✅ 卡片也使用 bg-body / border，随主题切换 */}
+              <Card className="h-100 bg-body border">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -49,10 +51,12 @@ export default function Projects() {
                 <Card.Body>
                   <Card.Title>{project.title}</Card.Title>
                   <Card.Text>{project.description}</Card.Text>
-                  <small className="text-muted">{project.stack}</small>
+                  {/* ✅ 文本用 text-body-secondary，自动适配 */}
+                  <small className="text-body-secondary">{project.stack}</small>
                 </Card.Body>
-                <Card.Footer>
-                  <Button href={project.github} target="_blank" variant="dark">
+                <Card.Footer className="bg-body border-0">
+                  {/* ✅ 按钮用 outline 变体，深浅都好看 */}
+                  <Button href={project.github} target="_blank" variant="outline-secondary">
                     🔗 Github
                   </Button>
                 </Card.Footer>

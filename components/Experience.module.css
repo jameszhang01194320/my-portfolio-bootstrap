@@ -1,31 +1,58 @@
+/* components/Experience.module.css */
+
+/* 容器：左侧竖线 */
 .timeline {
   position: relative;
-  margin-left: 40px;
-  padding-left: 40px;
-  border-left: 3px solid #343a40;
+  margin-left: 1.25rem;
+  border-left: 2px solid var(--bs-border-color);
 }
 
+/* 每一项 */
 .timelineItem {
   position: relative;
-  margin-bottom: 50px;
-  padding-left: 30px; /* 为文字内容预留空间 */
+  padding-left: 2.5rem;
+  margin-bottom: 2rem;
 }
 
+/* 年份圆角徽章 */
 .timelineBadge {
   position: absolute;
-  left: -60px;
-  top: 0;
-  background: #343a40;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  z-index: 1;
+  left: -1.25rem;
+  top: 0.25rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+
+  background: var(--bs-secondary-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-border-color);
 }
 
+/* 右侧内容卡片（跟随主题变量） */
 .timelineContent {
-  background: #fff;
-  padding: 5px 10px;
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  box-shadow: var(--bs-box-shadow-sm);
+}
+
+/* 可选：标题更显眼一点 */
+.timelineContent h5 {
+  color: var(--bs-body-color);
+}
+
+/* 竖线节点的小圆点（如果你有 ::before 之类的写法，可用这个代替） */
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  left: -0.47rem;
+  top: 0.55rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 9999px;
+  background: var(--bs-secondary-bg);
+  border: 1px solid var(--bs-border-color);
 }

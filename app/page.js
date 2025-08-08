@@ -2,7 +2,6 @@
 "use client";
 
 import React from "react";
-import CustomNavbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
@@ -11,23 +10,18 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 
-
-
 export default function Home() {
   return (
     <>
-      <CustomNavbar />
+      {/* 这里原本有 <CustomNavbar />，已删除 */}
 
       <section id="hero">
         <Hero />
       </section>
-            
-
 
       <section id="skills">
         <Skills />
       </section>
-
 
       <section id="experience">
         <Experience />

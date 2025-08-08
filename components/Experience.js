@@ -1,6 +1,6 @@
 // components/Experience.js
 import React from "react";
-import styles from "./Experience.module.css"; // 引入CSS模块
+import styles from "./Experience.module.css";
 
 const experiences = [
   {
@@ -37,20 +37,23 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <div className="container my-5" id="experience">
-      <h2 className="fw-bold mb-5">Experiences</h2>
-      <div className={styles.timeline}>
-        {experiences.map((item, index) => (
-          <div key={index} className={styles.timelineItem}>
-            <div className={styles.timelineBadge}>{item.year}</div>
-            <div className={styles.timelineContent}>
-              <h5 className="fw-bold mb-1">{item.title}</h5>
-              <p className="text-muted fw-semibold">{item.company}</p>
-              <p>{item.description}</p>
+    <section id="experience" className="py-5 bg-body">
+      <div className="container">
+        <h2 className="fw-bold mb-5">Experiences</h2>
+        <div className={styles.timeline}>
+          {experiences.map((item, index) => (
+            <div key={index} className={styles.timelineItem}>
+              <div className={styles.timelineBadge}>{item.year}</div>
+              <div className={styles.timelineContent}>
+                <h5 className="fw-bold mb-1">{item.title}</h5>
+                {/* ✅ 改成 text-body-secondary，自适应主题 */}
+                <p className="text-body-secondary fw-semibold">{item.company}</p>
+                <p>{item.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
