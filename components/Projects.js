@@ -10,7 +10,7 @@ const projects = [
     description: 'Backend system enabling homeowners and landlords to track appliance ownership and maintenance costs.',
     stack: 'Python, Flask, SQLAlchemy, PostgreSQL, RESTful API',
     image: `${basePath}/repair.jpg`,
-    github: 'https://github.com/jameszhang01194320/repair_or_replace_back_end'
+    github: 'https://github.com/jameszhang01194320/repair_or_replace-back_end'
   },
   {
     title: 'E-commerce Platform',
