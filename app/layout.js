@@ -2,18 +2,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Providers from "./Providers";
 import Navbar from "@/components/Navbar";
-
-export const metadata = {
-  title: "James Zhang Portfolio",
-  description: "Personal Portfolio",
-};
+import BootstrapClient from "./BootstrapClient";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>
-          <Navbar />         {/* ✅ 放到 Providers 里面 */}
+          <BootstrapClient />   {/* ✅ 全站只需挂一次 */}
+          <Navbar />
           {children}
         </Providers>
       </body>
