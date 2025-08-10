@@ -19,10 +19,14 @@ export default function Hero() {
         <Row className="align-items-center">
           <Col md={7}>
             <h1 className="display-4 text-body-emphasis">
-              Hey, I&apos;m <strong>James Zhang</strong>
+              Hey, I am <strong>James Zhang</strong>
             </h1>
             <p className="lead text-body-secondary">
-              I am a web developer with experience in Python, JavaScript, SQL, and full-stack web development.
+I am a full-stack software engineer specializing in Python, JavaScript, SQL, and frameworks like Flask, Django, and React. I design and deploy scalable backend systems, build RESTful APIs, and integrate responsive frontends to create seamless user experiences.
+
+My work includes developing a repair and maintenance tracking system for homeowners and landlords, a full-featured e-commerce platform with shopping cart and order processing, and a library management system optimized for performance.
+
+With a background in accounting and e-commerce, I bring technical depth and business insight, helping transform complex challenges into effective, user-friendly solutions. I am eager to contribute to impactful projects that improve efficiency and deliver measurable results.
             </p>
             <div className="mt-4 d-flex gap-2">
               {/* See Projects → 平滑滚动 */}
