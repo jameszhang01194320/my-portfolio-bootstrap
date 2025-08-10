@@ -24,7 +24,7 @@ const experiences = [
     Streamlined administrative workflows using tools like Excel and PowerPoint, ensuring smooth office operations.`,
   },
   {
-    year: "2017",
+    year: "2014",
     title: "E-Commerce Business Owner",
     company: "Self-Employed",
     description: `Built and managed an online platform for educational material sales, achieving $400,000+ in revenue.
