@@ -25,8 +25,8 @@ export default function Contact() {
                 </p>
                 <p className="mb-2">
                   ✉️{" "}
-                  <a href="mailto:j20102101@gmail.com" className="link-body-emphasis">
-                    j20102101@gmail.com
+                  <a href="mailto:wuab@yahoo.com" className="link-body-emphasis">
+                    wuab@yahoo.com
                   </a>
                 </p>
                 <p className="mb-0">
