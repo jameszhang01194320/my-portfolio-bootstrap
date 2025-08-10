@@ -21,7 +21,7 @@ export default function Hero() {
             <h1 className="display-4 text-body-emphasis">
               Hey, I am <strong>James Zhang</strong>
             </h1>
-            <p className="lead text-body-secondary">
+            <p className="text-body-emphasis">
 I am a full-stack software engineer specializing in Python, JavaScript, SQL, and frameworks like Flask, Django, and React. I design and deploy scalable backend systems, build RESTful APIs, and integrate responsive frontends to create seamless user experiences.
 
 My work includes developing a repair and maintenance tracking system for homeowners and landlords, a full-featured e-commerce platform with shopping cart and order processing, and a library management system optimized for performance.
