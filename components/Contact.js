@@ -55,7 +55,7 @@ export default function Contact() {
 
           {/* Form Section */}
           <div className="col-md-6">
-            <h3 className="fw-bold mb-4">Want to know more? Let's talk</h3>
+            <h3 className="fw-bold mb-4">Want to know more? Lets talk</h3>
             {/* ✅ 将 Formspree 端点 URL 添加到 action 属性 */}
 <form action="https://formspree.io/f/mzzvygwd" method="POST">
     <div className="mb-3 d-flex gap-3">
