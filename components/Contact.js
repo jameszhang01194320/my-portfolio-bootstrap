@@ -57,20 +57,18 @@ export default function Contact() {
           <div className="col-md-6">
             <h3 className="fw-bold mb-4">Want to know more? Let's talk</h3>
             {/* ✅ 将 Formspree 端点 URL 添加到 action 属性 */}
-            <form action="https://formspree.io/f/mzzvygwd" method="POST">
-              <div className="mb-3 d-flex gap-3">
-                {/* ✅ 为每个 input 添加 name 属性 */}
-                <input type="text" name="name" className="form-control" placeholder="Your Name" />
-                <input type="email" name="email" className="form-control" placeholder="Email" />
-              </div>
-              <div className="mb-3">
-                {/* ✅ 为 textarea 添加 name 属性 */}
-                <textarea name="message" className="form-control" rows="5" placeholder="Message"></textarea>
-              </div>
-              <button type="submit" className="btn btn-warning px-4">
-                Send Button
-              </button>
-            </form>
+<form action="https://formspree.io/f/mzzvygwd" method="POST">
+    <div className="mb-3 d-flex gap-3">
+        <input type="text" name="name" className="form-control" placeholder="Your Name" />
+        <input type="email" name="email" className="form-control" placeholder="Email" />
+    </div>
+    <div className="mb-3">
+        <textarea name="message" className="form-control" rows="5" placeholder="Message"></textarea>
+    </div>
+    <button type="submit" className="btn btn-warning px-4">
+        Send Button
+    </button>
+</form>
           </div>
         </div>
       </div>
