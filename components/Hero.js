@@ -16,7 +16,7 @@ function RotatingTitle({
   ],
   typeSpeed = 40,
   backSpeed = 40,
-  hold = 6000,
+  hold = 10000,
 }) {
   const [text, setText] = useState('');
   const [idx, setIdx] = useState(0);
