@@ -66,9 +66,10 @@ export default function Hero() {
       <Container>
         <Row className="align-items-center">
           <Col md={7}>
-            <h1 className="display-4 text-body-emphasis">
+            <h1 className="fs-3 fs-md-2 fs-lg-1 text-body-emphasis">
               Hey, I am <RotatingTitle />
             </h1>
+
 
             <p className="text-body-emphasis">
               I am a full-stack software engineer specializing in Python, JavaScript, SQL, and frameworks like Flask, Django, and React. I design and deploy scalable backend systems, build RESTful APIs, and integrate responsive frontends to create seamless user experiences.
