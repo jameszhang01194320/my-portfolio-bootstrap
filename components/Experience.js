@@ -38,7 +38,8 @@ Maintained patient database, ensuring accuracy, confidentiality, and reliable re
     company: "Self-Employed",
     description: `Built and managed an online platform for educational material sales, achieving $400,000+ in revenue.
 Utilized tools like Shopify and Google Ads to optimize marketing campaigns and enhance customer engagement.
-Maintained customer database, tracking orders, payments, and communication history to improve retention.`,
+Maintained customer database, tracking orders, payments, and communication history to improve retention.
+Handled bookkeeping tasks, recording sales, expenses, and reconciliations to support accurate financial reporting.`,
   },
 ];
 
