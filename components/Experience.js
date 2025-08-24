@@ -7,13 +7,21 @@ const experiences = [
     year: "Present",
     title: "Software Engineer Trainee",
     company: "Coding Temple · Remote",
-    tech: ["Python", "Flask", "React", "SQL", "PostgreSQL", "Docker", "AWS"],
+    tech: [
+      "PostgreSQL",
+      "MySQL",
+      "SQL / ER Modeling",
+      "Python (Flask/Django)",
+      "Docker",
+      "AWS",
+      "React",
+    ],
     points: [
-      "Developed RESTful APIs with Flask & SQLAlchemy; improved backend response time by 25%.",
-      "Designed PostgreSQL schemas for relational data; optimized queries for real-time reads.",
-      "Integrated React frontend with Flask via Axios (auth, cart, checkout).",
-      "Deployed full-stack apps to AWS with Docker; ensured scalability & reliability.",
-      "Collaborated in an Agile team of 5 (daily standups, bi-weekly reviews); +30% task efficiency.",
+      "Designed relational database schemas (ER diagrams, normalization) for multiple projects; enforced data integrity with FKs & constraints.",
+      "Optimized queries and indexing strategies (coverage indexes, EXPLAIN/ANALYZE) to improve read/write performance and reporting speed.",
+      "Implemented RESTful APIs on top of relational data models; all app features are database-driven (auth, cart/checkout, reporting).",
+      "Established database maintenance practices: backups, migration scripts, seed data, and recovery testing.",
+      "Deployed services with Docker + AWS; ensured reliability and repeatable DB migrations across environments.",
     ],
   },
   {
@@ -21,7 +29,8 @@ const experiences = [
     title: "Administrative Assistant",
     company: "John H Wu Medical Office",
     description: `Introduced a document management system, improving efficiency by 20%.
-    Streamlined administrative workflows using tools like Excel and PowerPoint, ensuring smooth office operations.`,
+Streamlined administrative workflows using tools like Excel and PowerPoint.
+Maintained patient database, ensuring accuracy, confidentiality, and reliable record retrieval.`,
   },
   {
     year: "2014",
@@ -29,7 +38,7 @@ const experiences = [
     company: "Self-Employed",
     description: `Built and managed an online platform for educational material sales, achieving $400,000+ in revenue.
 Utilized tools like Shopify and Google Ads to optimize marketing campaigns and enhance customer engagement.
-`,
+Maintained customer database, tracking orders, payments, and communication history to improve retention.`,
   },
 ];
 
@@ -44,47 +53,49 @@ function linesToPoints(desc = "") {
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-5 bg-body">
+    <section id="experiences" className="py-5 bg-body">
       <div className="container">
-        <h2 className="fw-bold mb-5">Experience</h2>
+        <div className="container-narrow">
+          <h2 className="fw-bold mb-5">Experience</h2>
 
-        <div className={styles.timeline}>
-          {experiences.map((item, idx) => {
-            // 把 tech 合并成一行，作为 bullets 的第一条；其余从 points 或 description 转换
-            const techBullet =
-              item.tech && item.tech.length ? item.tech.join(", ") : null;
+          <div className={styles.timeline}>
+            {experiences.map((item, idx) => {
+              // 把 tech 合并成一行，作为 bullets 的第一条；其余从 points 或 description 转换
+              const techBullet =
+                item.tech && item.tech.length ? item.tech.join(", ") : null;
 
-            const basePoints =
-              item.points && item.points.length > 0
-                ? item.points
-                : linesToPoints(item.description || "");
+              const basePoints =
+                item.points && item.points.length > 0
+                  ? item.points
+                  : linesToPoints(item.description || "");
 
-            const bullets = [techBullet, ...basePoints].filter(Boolean);
+              const bullets = [techBullet, ...basePoints].filter(Boolean);
 
-            return (
-              <div key={idx} className={styles.timelineItem}>
-                <div className={styles.timelineBadge}>{item.year}</div>
+              return (
+                <div key={idx} className={styles.timelineItem}>
+                  <div className={styles.timelineBadge}>{item.year}</div>
 
-                <div className={styles.timelineContent}>
-                  <h5 className="fw-bold mb-1">{item.title}</h5>
-                  <p className="text-body-secondary fw-semibold mb-2">
-                    {item.company}
-                  </p>
+                  <div className={styles.timelineContent}>
+                    <h5 className="fw-bold mb-1">{item.title}</h5>
+                    <p className="text-body-secondary fw-semibold mb-2">
+                      {item.company}
+                    </p>
 
-                  {/* 统一按列表渲染，包括“Python/Flask/…”那一行 */}
-                  {bullets.length > 0 && (
-                    <ul className="mt-2 mb-0 ps-3">
-                      {bullets.map((p, i) => (
-                        <li key={i} className="mb-1">
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                    {/* 统一按列表渲染，包括“tech”那一行 */}
+                    {bullets.length > 0 && (
+                      <ul className="mt-2 mb-0 ps-3">
+                        {bullets.map((p, i) => (
+                          <li key={i} className="mb-1">
+                            {p}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

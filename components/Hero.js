@@ -5,14 +5,13 @@ import Link from 'next/link';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useEffect, useRef, useState } from 'react';
 
-// ✅ 不再拼 basePath，直接指向 public/ 下的文件（保持你原来的相对路径写法也行）
 const resumePath = './James_Zhang_Resume_Backend_2025.pdf';
 
-// 只负责在 “I am” 后轮换文字（两项）：James Zhang / a Web Developer
+// 轮播：只用短词，避免换行抖动
 function RotatingTitle({
   words = [
     { text: 'James Zhang', bold: true },
-    { text: 'a Web Developer', bold: true },
+    { text: 'a Developer', bold: true },
   ],
   typeSpeed = 40,
   backSpeed = 40,
@@ -62,53 +61,60 @@ export default function Hero() {
   };
 
   return (
-    <section className="py-5 bg-body">
+    <section className="py-5 bg-body" id="about">
       <Container>
-        <Row className="align-items-center">
-          <Col md={7}>
-            <h1 className="fs-3 fs-md-2 fs-lg-1 text-body-emphasis">
-              Hey, I am <RotatingTitle />
-            </h1>
+        {/* 统一最大宽度，与 Skills 等一致 */}
+        <div className="container-narrow">
+          <Row className="align-items-center">
+            <Col md={7}>
+              <h1 className="fs-3 fs-md-2 fs-lg-1 text-body-emphasis">
+                Hey, I am <RotatingTitle />
+              </h1>
 
+              {/* 固定副标题：数据库核心定位，不随轮播变化 */}
+              <h2 className="h4 text-primary mb-3">
+                Database-Focused Full-Stack Developer
+              </h2>
 
-            <p className="text-body-emphasis">
-              I am a full-stack software engineer specializing in Python, JavaScript, SQL, and frameworks like Flask, Django, and React. I design and deploy scalable backend systems, build RESTful APIs, and integrate responsive frontends to create seamless user experiences.
+              <p className="text-body-emphasis">
+                I design and maintain <strong>relational databases</strong> (PostgreSQL, MySQL) and build
+                <strong> data-driven applications</strong> where every feature starts with the schema.
+                Focus areas: <strong>ER diagrams / data modeling</strong>, <strong>schema design &amp; normalization</strong>,
+                <strong> query optimization</strong>, and <strong>database maintenance</strong> (backups, indexing, integrity).
+                With 20+ years of hands-on database experience, I ensure reliability, consistency, and performance.
+              </p>
 
-              My work includes developing a repair and maintenance tracking system for homeowners and landlords, a full-featured e-commerce platform with shopping cart and order processing, and a library management system optimized for performance.
+              <div className="mt-4 d-flex gap-2">
+                <Button as={Link} href="#projects" onClick={scrollToProjects} variant="primary">
+                  See Projects
+                </Button>
 
-              With a background in accounting and e-commerce, I bring technical depth and business insight, helping transform complex challenges into effective, user-friendly solutions. I am eager to contribute to impactful projects that improve efficiency and deliver measurable results.
-            </p>
+                <Button
+                  as="a"
+                  href={resumePath}
+                  download
+                  target="_blank"
+                  rel="noopener"
+                  variant="outline-secondary"
+                >
+                  📄 Resume
+                </Button>
+              </div>
+            </Col>
 
-            <div className="mt-4 d-flex gap-2">
-              <Button as={Link} href="#projects" onClick={scrollToProjects} variant="primary">
-                See Projects
-              </Button>
-
-              <Button
-                as="a"
-                href={resumePath}
-                download
-                target="_blank"
-                rel="noopener"
-                variant="outline-secondary"
-              >
-                📄 Resume
-              </Button>
-            </div>
-          </Col>
-
-          <Col md={5}>
-            <Image
-              src="./me.jpg"   // 保持你的原路径
-              alt="James Zhang"
-              width={400}
-              height={400}
-              className="mx-auto d-block rounded shadow"
-              style={{ maxWidth: '100%', height: 'auto' }}
-              priority
-            />
-          </Col>
-        </Row>
+            <Col md={5}>
+              <Image
+                src="./me.jpg"        // 保持你的原路径
+                alt="James Zhang"
+                width={400}
+                height={400}
+                className="mx-auto d-block rounded shadow"
+                style={{ maxWidth: '100%', height: 'auto' }}
+                priority
+              />
+            </Col>
+          </Row>
+        </div>
       </Container>
     </section>
   );
